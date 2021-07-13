@@ -1,0 +1,14 @@
+<div>
+<h1> Add Task </h1>
+   <%=form_with model: [@categories, @categories.tasks.build]  do |form|%>
+    <%=form.label :task_name %> 
+    <%=form.text_field :taskname %>
+    <%=form.label :body %>
+    <%=form.text_field :body %>
+    <%=form.label :time %>
+    <%=form.text_field :time %>
+<br>
+<br>
+<%=form.submit "Submit" %>
+    <%end%>
+    </div>

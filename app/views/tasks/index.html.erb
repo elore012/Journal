@@ -1,0 +1,19 @@
+<body id="task-details-body">
+<h1 style="background-color:purple;color:white;height:100px;padding:20px;padding-bottom:10px;"> Task Details </h1>
+<br>
+<div>;
+<% @tasks.each do |task| %>
+    <div class = "task-details">
+        <h1><%= task.taskname %></h1>
+        <h3><%= task.body %></h3>
+        <h5><%= task.time %></h5>
+        <%= link_to 'View',category_task_path(task.category_id,task.id) %>
+        <%= link_to ' Add new Task' , category_path(task.category_id)%>
+    </div>
+<%end%>
+
+</div>
+</body>
+
+
+
